@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+   // printf("Hello World\n");
+    int cantidadImagenes = 10;
+    int i = 1 ;
+    char numero[10];
+    
+    while (i<=cantidadImagenes){
+        sprintf(numero, "%d", i);
+        const char* prefijo = "imagen";
+        const char* extencion = ".bpm";
+        
+        char nombreImagen[50];
+        strcpy(nombreImagen, prefijo); 
+        strcat(nombreImagen, "_"); 
+        strcat(nombreImagen, numero); 
+        strcat(nombreImagen, extencion);
+        printf("nombreImagen: %s\n", nombreImagen);
+        //aqui tiene que ir todo lo que se le quiere hacer a esa imagen// 
+        i = i + 1;
+    }
+    
+
+    return 0;
+}
